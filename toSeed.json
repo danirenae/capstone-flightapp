@@ -1,0 +1,45 @@
+{
+  "posts": {
+    "post0": {
+      "airportCity" : "Nashville",
+      "airportCode" : "BNA",
+      "comment": "line is long",
+      "waitTime":  "60",
+      "timeStamp": "12:35",
+      "username": "larry",
+      "uid": ""
+    },
+    "post1": {
+      "airportCity" : "Evansville",
+      "airportCode" : "EVV",
+      "comment": "line is SUPER short",
+      "waitTime":  "10",
+      "timeStamp": "15:00",
+      "username": "curly",
+      "uid": ""
+    },
+    "post2": {
+      "airportCity" : "Barcelona",
+      "airportCode" : "BCN",
+      "comment": "long",
+      "waitTime":  "90",
+      "timeStamp": "7:52",
+      "username": "moe",
+      "uid": ""
+    }
+  },
+  "users": {
+    "user0": {
+      "uid": "",
+      "username": "a"
+    },
+    "user1": {
+      "uid": "",
+      "username": "b"
+    },
+    "user2": {
+      "uid": "",
+      "username": "c"
+    }
+  }
+}

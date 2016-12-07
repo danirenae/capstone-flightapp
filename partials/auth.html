@@ -1,4 +1,4 @@
- <div class="container col-xs-6 col-xs-offset-3">
+<div class="container col-xs-6 col-xs-offset-3">
   <div class="row">
     <button class="btn btn-info col-xs-6" ng-click="setLoginContainer()">Login</button>
     <button class="btn btn-success col-xs-6" ng-click="setRegisterContainer()">Register</button>
@@ -11,10 +11,10 @@
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input type="text" id="inputPassword" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="login.password" required>
+      <input type="text" id="inputPassword" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="login.password" required>
     </div>
     <div class="form-group">
-      <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="loginUser(login)">Login Registration</a>
+      <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="loginUser(login)">Login</a>
     </div>
   </form>
   <form ng-show="registerContainer">
@@ -24,11 +24,11 @@
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input type="text" id="inputPassword" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="register.password" required autofocus>
+      <input type="text" id="inputPassword" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="register.password" required autofocus>
     </div>
     <div class="form-group">
       <label>Username</label>
-      <input type="text" id="inputUsername" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="register.username" required autofocus>
+      <input type="text" id="inputUsername" class="col-xs-offset-1 col-xs-10" placeholder="Username" ng-model="register.username" required autofocus>
     </div>
     <div class="form-group">
       <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="registerUser(register)">Submit Registration</a>

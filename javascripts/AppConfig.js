@@ -49,7 +49,6 @@ app.config(function($routeProvider){ //routeProvider is angular method that does
     .when('/home', {
       templateUrl: 'partials/home.html',
       controller: 'HomeCtrl',
-      resolve: {isAuth}
     })
     .when('/add-post', {
       templateUrl: 'partials/add-post.html',

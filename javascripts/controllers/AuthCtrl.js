@@ -1,7 +1,7 @@
 "use strict";
 
-app.controller("AuthCtrl", function($scope, $rootScope, ItemFactory, AuthFactory, UserFactory, $location){
-  // $scope.message = "AuthCtrl"
+app.controller("AuthCtrl", function($scope, $rootScope, AuthFactory, UserFactory, $location){
+  $scope.message = "AuthCtrl"
   $scope.loginContainer = true;
   $scope.registerContainer = false;
 
@@ -17,10 +17,10 @@ let logMeIn = function(loginStuff){
     console.log(didLogin);
     return UserFactory.getUser(didLogin.uid);
   }).then(function(userCreds){
-      $rootScope.user = userCreds; //the scope that's available no matter what root youre in
+      $rootScope.user = userCreds;
       $scope.login = {};
       $scope.register = {};
-      $location.url("/items/list");
+      $location.url("/home");
   });
 };
 

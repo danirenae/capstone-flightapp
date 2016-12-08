@@ -20,8 +20,8 @@ app.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     let appTo;
 
 if(currRoute.originalPath){
-    appTo = 5 !== -1 //true
-    appTo = -1 !== -1 //false
+    appTo = 5 !== -1; //true
+    appTo = -1 !== -1; //false
     appTo = currRoute.originalPath.indexOf('/auth') !== -1;
 }
 

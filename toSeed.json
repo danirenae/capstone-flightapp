@@ -6,8 +6,8 @@
       "comment": "line is long",
       "waitTime":  "60",
       "timeStamp": "12:35",
-      "username": "larry",
-      "uid": ""
+      "username": "D",
+      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     },
     "post1": {
       "airportCity" : "Evansville",
@@ -15,8 +15,8 @@
       "comment": "line is SUPER short",
       "waitTime":  "10",
       "timeStamp": "15:00",
-      "username": "curly",
-      "uid": ""
+      "username": "D",
+      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     },
     "post2": {
       "airportCity" : "Barcelona",
@@ -38,8 +38,8 @@
       "username": "b"
     },
     "user2": {
-      "uid": "",
-      "username": "c"
+      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1",
+      "username": "D"
     }
   }
 }

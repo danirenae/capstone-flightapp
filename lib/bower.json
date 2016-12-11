@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "angular": "^1.5.9",
-    "angular-route": "^1.5.9"
+    "angular-route": "^1.5.9",
+    "jquery-ui": "^1.12.1",
+    "github-jquery-widgets": "^0.1.1"
   }
 }

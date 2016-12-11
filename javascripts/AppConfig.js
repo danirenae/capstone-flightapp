@@ -19,6 +19,8 @@ app.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     let logged = AuthFactory.isAuthenticated();
     let appTo;
 
+console.log(currRoute);
+
 if(currRoute.originalPath){
     appTo = 5 !== -1; //true
     appTo = -1 !== -1; //false
@@ -53,24 +55,24 @@ app.config(function($routeProvider){ //routeProvider is angular method that does
     .when('/add-post', {
       templateUrl: 'partials/add-post.html',
       controller: 'AddPostCtrl',
-      resolve: {isAuth}
+      // resolve: {isAuth}
     })
     .when('/my-posts', {
       templateUrl: 'partials/my-posts.html',
       controller: 'MyPostsCtrl',
-      resolve: {isAuth}
+      // resolve: {isAuth}
     })
     .when('/profile', {
       templateUrl: 'partials/profile.html',
       controller: 'ProfileCtrl',
-      resolve: {isAuth}
+      // resolve: {isAuth}
     })
     .when('/logout', {
       templateUrl: 'partials/auth.html',
       controller: 'AuthCtrl',
       resolve: {isAuth}
     })
-    .otherwise('/auth');
+    // .otherwise('/auth');
 });
 
 

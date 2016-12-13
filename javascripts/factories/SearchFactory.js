@@ -8,7 +8,7 @@ app.factory("SearchFactory", function($q, $http){
       $http.get(`https://airport.api.aero/airport/${searchText}?user_key=e31af075f080ff657d91f84df8e0cab6`)
       .success( (getAirportSearchResponse)=>{
         console.log("getAirportSearchResponse", getAirportSearchResponse);
-        resolve(getAirportSearchResponse);
+        resolve(getAirportSearchResponse.airports[0]);
       })
       .error( (getAirportSearchError)=>{
         reject(getAirportSearchError);

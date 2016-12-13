@@ -17,6 +17,7 @@ let logMeIn = function(loginStuff){
     console.log(didLogin);
     return UserFactory.getUser(didLogin.uid);
   }).then(function(userCreds){
+    console.log("userCreds", userCreds);
       $rootScope.user = userCreds;
       $scope.login = {};
       $scope.register = {};
@@ -49,3 +50,4 @@ $scope.loginUser = function (loginNewUser){
   logMeIn(loginNewUser);
   };
 });
+

@@ -1,5 +1,5 @@
 "use strict";
 
-app.controller("MyPostsCtrl", function($scope, SearchFactory, PostFactory, $routeProvider){
+app.controller("MyPostsCtrl", function($scope, SearchFactory, PostFactory){
 
 });

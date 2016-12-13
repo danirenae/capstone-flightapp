@@ -1,8 +1,9 @@
+<div class="container" ng-controller="AddPostCtrl">
 <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Username" id="username" type="text" class="validate">
+          <input id="username" type="text" class="validate" ng-model="newPost.username">
           <label for="Username">Username</label>
           </div>
         </div>
@@ -14,47 +15,51 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Airport Code" id="airport-code" type="text" class="validate">
+          <input id="airport-code" type="text" class="validate">
           <label for="airport-code">Airport Code</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="comment" type="comment" class="validate">
-          <label for="comment">Comment</label>
+       <div class="input-field col s12">
+          <textarea id="comment" class="materialize-textarea" length="140"></textarea>
+          <label for="comment">Comment Less Than 140 Charcters</label>
         </div>
       </div>
-        <div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Wait Time</option>
+
+  <div class="col s12">
+    <select class="" ng-model="selectedOption" material-select>
+      <option value="">Choose Your Wait Time</option>
       <option value="1">10 minutes</option>
       <option value="2">20 minutes</option>
-      <option value="2">30 minutes</option>
-      <option value="2">40 minutes</option>
-      <option value="2">50 minutes</option>
-      <option value="2">60 minutes (1 hour)</option>
-      <option value="2">70 minutes</option>
-      <option value="2">80 minutes</option>
-      <option value="2">90 minutes (1.5 hours)</option>
-      <option value="2">100 minutes</option>
-      <option value="2">110 minutes</option>
-      <option value="2">120 minutes (2 hours)</option>
-      <option value="2">130 minutes</option>
-      <option value="2">140 minutes</option>
-      <option value="2">150 minutes (2.5 hours)</option>
-      <option value="2">160 minutes</option>
-      <option value="2">170 minutes</option>
-      <option value="2">180 minutes (3 hours)</option>
-      <option value="2">190+ minutes (3+ hours)</option>
+      <option value="3">30 minutes</option>
+      <option value="4">40 minutes</option>
+      <option value="5">50 minutes</option>
+      <option value="6">60 minutes (1 hour)</option>
+      <option value="7">70 minutes</option>
+      <option value="8">80 minutes</option>
+      <option value="9">90 minutes (1.5 hours)</option>
+      <option value="10">100 minutes</option>
+      <option value="11">110 minutes</option>
+      <option value="12">120 minutes (2 hours)</option>
+      <option value="13">130 minutes</option>
+      <option value="14">140 minutes</option>
+      <option value="15">150 minutes (2.5 hours)</option>
+      <option value="16">160 minutes</option>
+      <option value="17">170 minutes</option>
+      <option value="18">180 minutes(3 hours)</option>
+      <option value="19">190+ minutes (3+ hours)</option>
     </select>
     <label>Wait Time</label>
   </div>
-      </div>
+
      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+      <label for="inputCreated">Date</label>
+        <input input-date= "" type="text"  id="date" ng-model="currentTime">
           <label for="disabled">Time</label>
         </div>
-      </div>
+
+ <!-- <button class="btn btn-warning" ng-click="reveal()"> + Create New </button> -->
+
     </form>
+  </div>
   </div>

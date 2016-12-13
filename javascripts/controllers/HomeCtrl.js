@@ -2,6 +2,8 @@
 
 app.controller("HomeCtrl", function($scope, SearchFactory, PostFactory, $rootScope){
 $scope.searchAir = [];
+$scope.searchedCode = {};
+// $scope.airportRevealer = false;
 //return search push it up to the dom elements
   // $scope.enterKey = (event)=>{
   //   var keyCode = event.which || event.keyCode;
@@ -23,16 +25,21 @@ $scope.searchAir = [];
 $scope.searchAirportCode = (searchCode)=>{
     console.log("searchCode", searchCode);
     SearchFactory.getAirportSearch(searchCode).then((searchCodes)=>{
-      $scope.searchAir = searchCodes.airportCode;
+      console.log(searchCodes);
+      $scope.searchedCode = searchCodes
+      // $scope.searchAir = searchCodes.airportCode;
     });
   };
 
-let getAirportPostsByCode = function(){
-  PostFactory.getPost($rootScope.user.airportCode).then(function(fbItems){
-    $scope.posts = fbItems;
-  })
-};
-getAirportPostsByCode();
+// let getAirportPostsByCode = function(){
+//   PostFactory.getPost($rootScope.airports[0].code).then(function(fbItems){
+
+//     $scope.posts = fbItems;
+//     console.log(fbItems);
+//     console.log(airports[0].code)
+//   })
+// };
+// getAirportPostsByCode();
 
 // let getItems = function(){
 //    ItemFactory.getItemList($rootScope.user.uid).then(function(fbItems){
@@ -41,28 +48,13 @@ getAirportPostsByCode();
 // };
 // getItems();
 
+    let getAirportList = function(){
+      PostFactory.getPost().then(function(fbItems){
+        $scope.posts = fbItems;
+        console.log("THINGS ARE HAPPENING", fbItems)
+      });
+    };
+  // getPost();
 
-
-
-//   //Save search to board
-//   $scope.newPin = {};
-//   $scope.savePin = (selectedBoard, searchImage)=>{
-//     console.log("selectedBoard", selectedBoard);
-//     $scope.newPin.pinTitle = searchImage.title;
-//     $scope.newPin.boardid = selectedBoard;
-//     $scope.newPin.url = searchImage.link;
-//     $scope.newPin.uid = $rootScope.user.uid;
-//     PinFactory.postNewPin($scope.newPin).then((postResponse)=>{
-//       console.log("postResponse", postResponse);
-//       $scope.newPin = {};
-//     });
-//   };
-//   $scope.removeSearchImage = function(searchImage) {
-//       var index = $scope.searchImages.indexOf(searchImage);
-//       $scope.searchImages.splice(index, 1);
-//   };
-//   $scope.newBoard = function(){
-//     $location.url('/boards/new');
-//   };
 });
 

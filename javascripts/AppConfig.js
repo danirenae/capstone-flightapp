@@ -38,7 +38,7 @@ if(currRoute.originalPath){
   });
 });
 
-app.config(function($routeProvider){ //routeProvider is angular method that does routes
+app.config(function($routeProvider, $qProvider){ //routeProvider is angular method that does routes
   $routeProvider
     .when('/', {
       templateUrl: 'partials/auth.html',
@@ -46,33 +46,34 @@ app.config(function($routeProvider){ //routeProvider is angular method that does
     })
     .when('/auth', {
       templateUrl: 'partials/auth.html',
-      controller: 'AuthCtrl',
+      controller: 'AuthCtrl'
     })
     .when('/home', {
       templateUrl: 'partials/home.html',
       controller: 'HomeCtrl',
+      resolve: {isAuth}
     })
     .when('/add-post', {
       templateUrl: 'partials/add-post.html',
       controller: 'AddPostCtrl',
-      // resolve: {isAuth}
+      resolve: {isAuth}
     })
     .when('/my-posts', {
       templateUrl: 'partials/my-posts.html',
       controller: 'MyPostsCtrl',
-      // resolve: {isAuth}
+      resolve: {isAuth}
     })
     .when('/profile', {
       templateUrl: 'partials/profile.html',
       controller: 'ProfileCtrl',
-      // resolve: {isAuth}
+      resolve: {isAuth}
     })
     .when('/logout', {
       templateUrl: 'partials/auth.html',
       controller: 'AuthCtrl',
       resolve: {isAuth}
     })
-    // .otherwise('/auth');
+    .otherwise('/auth');
 });
 
 

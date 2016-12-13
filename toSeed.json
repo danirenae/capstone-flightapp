@@ -41,5 +41,26 @@
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1",
       "username": "D"
     }
+  },
+  "profiles": {
+    "profile1" : {
+      "fullname" : "Dani Adkins",
+      "username" : "D",
+      "uid" : "HhrMZlIk0rhWpearUZoadcSIfvt1",
+      "homeairport" : "Nashville"
+    },
+    "profile2" : {
+      "fullname" : "A-A-Ron",
+      "username" : "A",
+      "uid" : "",
+      "homeairport" : "Los Angeles"
+    },
+    "profile3" : {
+      "fullname" : "B",
+      "username" : "B",
+      "uid" : "",
+      "homeairport" : "Portland"
+    }
   }
+
 }

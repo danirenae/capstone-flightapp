@@ -1,4 +1,4 @@
-<div class="container" ng-controller="HomeCtrl">
+<div class="container">
     <div class="row">
         <div class="input-field col s10">
           <input ng-model="searched" placeholder="Code here" id="" type="text" class="validate">
@@ -21,72 +21,14 @@
 
 
 
-    <!-- <h3>Pins</h3> -->
-<!-- <div ng-repeat="pin in pins"> -->
-  <!-- <img src={{p=}} alt="">
-  <div class="panel panel-default">
-      <div class="panel-body">
-      <div class="row">{{pin.title}}</div>
-      <div class="row" ><img style="height: 100px; width:100px;" src="{{pin.url}}"></img></div>
-      <div class="row">{{pin.boardid}}</div>
-         <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deletePin(pin.id)"></button></div>
-      </div>
-  </div>
-</div> -->
 
-<!-- <div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default"><i class="fa fa-search"></i></button>
-      </span>
-        <input type="text" class="form-control" placeholder="Search for ..." ng-model="searchText">
-    </div>
-  </div>
+<div class="row">
+<div class="col s10">
+<div>Empty Div for Output from Add Post</div>
+<div class="post-output" ng-repeat="cat in posts">hiya {{cat.comment}}</div>
+</div>
 </div>
 
-<h3>Todo</h3>
-<div ng-repeat="item in items | filter: {isCompleted:false} | filter: searchText">
-  <div class="panel panel-default">
-      <div class="panel-body">
-          <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-          <div class="col-xs-9"><a href="#/items/view/{{item.id}}">{{item.task}}</a></div>
-          <div class="col-xs-1">{{item.assignedTo}}</div>
-          <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(item.id)"></button></div>
-      </div>
-  </div>
-</div>
-
-<h3>Completed</h3>
-<div ng-repeat="item in items | filter: {isCompleted:true} | filter: searchText">
-  <div class="panel panel-default">
-      <div class="panel-body">
-          <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-          <div class="col-xs-9"><a href="#/items/view/{{item.id}}">{{item.task}}</a></div>
-          <div class="col-xs-1">{{item.assignedTo}}</div>
-          <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(item.id)"></button></div>
-      </div>
-  </div>
-</div> -->
-
-
-
-<!--
-
-<div class="row"  ng-repeat="dog in result">
-        <div class="col s12 m5">
-        <div class="card-panel teal">
-        <span class="card-title">{{dog.name}}</span>
-
-          <span class="white-text">{{dog.formatted_address}}
-          </span>
-          <a href ng-click="addFavorite(dog)">Add to Favorites!</a>
-        </div>
-
-      </div>
-
-
-      </div> -->
 
 
 

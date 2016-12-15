@@ -29,6 +29,9 @@ app.factory("SearchFactory", function($q, $http){
   };
 
 
-  return {getAirportSearchCode:getAirportSearchCode, getAirportSearchCity:getAirportSearchCity};
+  return {
+    getAirportSearchCode:getAirportSearchCode,
+    getAirportSearchCity:getAirportSearchCity
+  };
 });
 

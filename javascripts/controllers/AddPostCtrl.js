@@ -24,8 +24,7 @@ $scope.addPostSearchAirportCode = (searchAirportCode)=>{
     console.log("searchAirportCode", searchAirportCode);
     SearchFactory.getAirportSearchCode(searchAirportCode).then((searchAirportCodes)=>{
       console.log(searchAirportCodes);
-      $scope.searchedAirportCode = searchAirportCodes
-      // $scope.searchAir = searchCodes.airportCode;
+      $scope.searchedAirportCode = searchAirportCodes;
     });
   };
 
@@ -34,17 +33,33 @@ $scope.addPostSearchAirportCity = (searchAirportCity)=>{
     console.log("searchAirportCity", searchAirportCity);
     SearchFactory.getAirportSearch(searchAirportCity).then((searchAirportCities)=>{
       console.log(searchAirportCities);
-      $scope.searchedAirportCity = searchAirportCities
-      // $scope.searchAir = searchCodes.airportCode;
+      $scope.searchedAirportCity = searchAirportCities;
     });
   };
 
 
-//call to API on the form so that nothing is misspelled
-$scope.newPost = {
-  username : $rootScope.user.username,
-  timeStamp : new Date()
+
+
+//this will add a new post to the dom in home
+$scope.newPost = {}
+
+$scope.submitAddNewPost = (submit)=>{
+  console.log(submit);
+  $scope.newPost.uid = $rootScope.user.uid;
+
+      $scope.newPost.username = $rootScope.user.username;
+      $scope.newPost.timeStamp = new Date();
+
+  PostFactory.postNewPost($scope.newPost).then(function(postId){
+    $scope.newPost = {};
+    $location.url("/home")
+  });
 };
+
+// $scope.revealNewPost = function(){
+//   $scope.newPostRevealer = true;
+// }
+
 
 
 

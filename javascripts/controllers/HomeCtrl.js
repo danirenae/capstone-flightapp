@@ -4,6 +4,9 @@ app.controller("HomeCtrl", function($scope, SearchFactory, PostFactory, $rootSco
 $scope.searchAir = [];
 $scope.searchedCode = {};
 $scope.searchedCity = {};
+$scope.posts = [];
+$scope.newPostRevealer = false;
+let allPosts = [];
 
 // return search push it up to the dom elements
   // $scope.enterKey = (event)=>{
@@ -20,6 +23,13 @@ $scope.searchAirportCode = (searchCode)=>{
     SearchFactory.getAirportSearchCode(searchCode).then((searchCodes)=>{
       console.log(searchCodes);
       $scope.searchedCode = searchCodes
+      //all posts function to add all posts for that city
+      PostFactory.getPost().then(function(fbItems){
+         allPosts = fbItems;
+         console.log("THINGS ARE HAPPENING", fbItems)
+         getAirportList($scope.searchedCode.code);
+      });
+
     });
   };
 
@@ -33,13 +43,24 @@ $scope.searchAirportCity = (searchCity)=>{
   };
 
 
-    let getAirportList = function(){
-      PostFactory.getPost().then(function(fbItems){
-        $scope.posts = fbItems;
-        console.log("THINGS ARE HAPPENING", fbItems)
+
+    let getAirportList = function(codeycode){
+      $scope.posts = [];
+      allPosts.forEach(function(mypost){
+      console.log("mypost inside", mypost );
+        if (mypost.airportCode === codeycode){
+          $scope.posts.push(mypost)
+        };
+      console.log("$scope.posts after", $scope.posts )
       });
+
     };
-  // getAirportList();
+
+
+
+// $scope.revealNewPost = function(){
+//   $scope.newPostRevealer = true;
+// }
 
 });
 

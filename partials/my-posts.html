@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+    <div ng-repeat="dog in posts">
+    <div>{{dog.username}}</div>
+
+    <div>{{dog.timeStamp}}</div>
+    <div>{{dog.waitTime}}</div>
+    <div>{{dog.comment}}</div>
+    <div>{{dog.airportCode}}</div>
+    <div>{{dog.airportCity}}</div>
+
+    </div>
+
+
+<!--
+    <h3>Todo</h3>
+<div ng-repeat="item in items | filter: {isCompleted:false} | filter: searchText">
+  <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
+          <div class="col-xs-9"><a href="#/items/view/{{item.id}}">{{item.task}}</a></div>
+          <div class="col-xs-1">{{item.assignedTo}}</div>
+          <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(item.id)"></button></div>
+      </div>
+  </div>
+</div> -->

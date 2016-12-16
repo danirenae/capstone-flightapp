@@ -42,7 +42,7 @@ app.factory("PostFactory", function($q, $http, FIREBASE_CONFIG){
 
  var getPostByUid = function(userId){
     return $q((resolve,reject)=>{
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/posts.json?orderBy="uid"&equalTo="${userId.uid}"`)
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/posts.json?orderBy="uid"&equalTo="${userId}"`)
         .success(function(response){
           let posts = [];
           Object.keys(response).forEach(function(key){

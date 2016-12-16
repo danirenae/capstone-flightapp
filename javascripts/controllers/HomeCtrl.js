@@ -43,7 +43,7 @@ $scope.searchAirportCity = (searchCity)=>{
   };
 
 
-
+//this is called in searchAirportCode above
     let getAirportList = function(codeycode){
       $scope.posts = [];
       allPosts.forEach(function(mypost){

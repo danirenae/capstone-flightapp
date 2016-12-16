@@ -62,7 +62,7 @@
       </div>
 
   <div class="col s12">
-    <select class="" ng-model="selectedOption" material-select>
+    <select class="" ng-model="newPost.waitTime" material-select>
       <option value="">Choose Your Wait Time</option>
       <option value="1">10 minutes</option>
       <option value="2">20 minutes</option>
@@ -89,7 +89,7 @@
 
 <div>
 
-  <button class="waves-effect waves-light btn-large col s10" ng-click="submitAddNewPost()">Submit</button>
+  <button class="waves-effect waves-light btn-large col s10" ng-click="submitAddNewPost(postId.id)">Submit</button>
 </div>
 
 

@@ -44,11 +44,15 @@ $scope.addPostSearchAirportCity = (searchAirportCity)=>{
 $scope.newPost = {}
 
 $scope.submitAddNewPost = (submit)=>{
-  console.log(submit);
+  console.log("SUBMIT HAPPENED", submit);
   $scope.newPost.uid = $rootScope.user.uid;
 
+
+      $scope.newPost.airportCode = $scope.searchedAirportCode.code;
+      $scope.newPost.airportCity = $scope.searchedAirportCode.city;
       $scope.newPost.username = $rootScope.user.username;
       $scope.newPost.timeStamp = new Date();
+
 
   PostFactory.postNewPost($scope.newPost).then(function(postId){
     $scope.newPost = {};
@@ -62,6 +66,16 @@ $scope.submitAddNewPost = (submit)=>{
 
 
 
+//   console.log("$routeParams", $routeParams);
+//   $scope.selectedItem = {};
+//   let itemId = $routeParams.id;
+//   console.log("$routeParams", itemId);
+
+//   ItemFactory.getSingleItem(itemId).then(function(oneItem){
+//       oneItem.id = itemId;
+//       $scope.selectedItem = oneItem;
+//   });
+// });
 
 
 

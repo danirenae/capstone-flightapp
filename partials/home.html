@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="input-field col s10">
-          <input ng-model="searched" placeholder="Code here" id="" type="text" class="validate">
-          <label for="first_name">Airport City or Airport Code</label>
+          <input ng-model="searched" placeholder="" id="" type="text" class="validate">
+          <label for="first_name">Enter Airport Code</label>
        </div>
   <div class="form-group">
       <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="searchAirportCode(searched)">Enter</a>
@@ -24,8 +24,16 @@
 
 <div class="row">
 <div class="col s10">
-<div>Empty Div for Output from Add Post</div>
-<div class="post-output" ng-repeat="cat in posts">hiya {{cat.comment}}</div>
+<div class="post-output" ng-repeat="cat in posts">
+<h3>{{cat.airportCode}} - {{cat.airportCity}} Recent Messages</h3>
+<div>{{cat.username}}</div>
+<div>{{cat.airportCode}}</div>
+<!-- <div>{{cat.airportCity}}</div>
+<div>{{cat.airportCode}}</div> -->
+<div>{{cat.timeStamp}}</div>
+<div>{{cat.waitTime}}</div>
+<div>{{cat.comment}}</div>
+</div>
 </div>
 </div>
 

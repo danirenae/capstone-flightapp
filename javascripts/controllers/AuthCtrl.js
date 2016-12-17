@@ -32,7 +32,6 @@ let logMeIn = function(loginStuff){
 $scope.setLoginContainer = function(){
   $scope.loginContainer = true;
   $scope.registerContainer = false;
-
 };
 
 $scope.setRegisterContainer = function (){
@@ -54,4 +53,3 @@ $scope.loginUser = function (loginNewUser){
   logMeIn(loginNewUser);
   };
 });
-

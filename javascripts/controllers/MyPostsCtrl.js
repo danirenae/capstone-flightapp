@@ -7,42 +7,27 @@ $scope.myPost = {};
 let allPosts = [];
 $scope.posts = [];
 
+ let getPosts = function () {
  PostFactory.getPostByUid(userId).then((postByUid)=>{
-  console.log("postByUid", postByUid);
   $scope.posts = postByUid;
- })
+ });
+};
+getPosts();
 
-//delete function from todo
-// $scope.deleteItem = function(itemId){ //passed this in on click here and in HTML - we delete item.id in html and this is why we created items with ids
-//   console.log("you deleted me");
-//   ItemFactory.deleteItem(itemId).then(function(response){
-//     getItems(); //once it is deleted then refresh the DOM
-//   });
-// };
+// delete function from todo
+$scope.deletePost = function(postId){ //passed this in on click here and in HTML - we delete item.id in html and this is why we created items with ids
+  console.log("you deleted me");
+  console.log(postId);
+  PostFactory.deletePost(postId).then(function(response){
+    getPosts();
+  });
+};
 
-//edit function from todo - also look at Edit controller and edit in factory
-// $scope.inputChange = function(thingy){
-//   ItemFactory.editItem(thingy).then(function(response){
-//   });
-// };
+// edit function from todo - also look at Edit controller and edit in factory
+$scope.inputChange = function(thingy){
 
-
-
-
-
-
-
-// $scope.putMyPostToDOM = function(putPost){
-//   $scope.posts =[];
-//   allPosts.forEach(function(postByUid){
-//     console.log("POST BY UID", postByUid);
-//     //how can I write this to grab the current user?
-//     //would it be better to use a filter?
-//       if(postByUid.uid === uid.current)
-//         $scope.posts.push(postByUid);
-//   })
-// }
-//   putMyPostToDOM($scope.);
-
-
+  PostFactory.editPost(thingy).then(function(response){
+    getPosts();
+  });
+};
 });

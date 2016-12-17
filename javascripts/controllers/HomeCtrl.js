@@ -16,7 +16,6 @@ let allPosts = [];
   //     }
   // };
 
-
   //search by airport code
 $scope.searchAirportCode = (searchCode)=>{
     console.log("searchCode", searchCode);
@@ -42,7 +41,6 @@ $scope.searchAirportCity = (searchCity)=>{
     });
   };
 
-
 //this is called in searchAirportCode above
     let getAirportList = function(codeycode){
       $scope.posts = [];
@@ -56,11 +54,8 @@ $scope.searchAirportCity = (searchCity)=>{
 
     };
 
-
-
 // $scope.revealNewPost = function(){
 //   $scope.newPostRevealer = true;
 // }
 
 });
-

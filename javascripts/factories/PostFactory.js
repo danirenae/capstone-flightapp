@@ -56,49 +56,59 @@ app.factory("PostFactory", function($q, $http, FIREBASE_CONFIG){
         });
     });
   };
- //  var deleteItem = function(itemId){
- //    return $q((resolve, reject)=>{
- //      $http.delete(`${FIREBASE_CONFIG.databaseURL}/items/${itemId}.json`)
- //      .success(function(deleteResponse){
- //        resolve(deleteResponse);
- //      })
- //      .error(function(deleteError){
- //        reject(deleteError);
- //      });
- //    });
- //  };
 
+  var deletePost = function(postId){
+    return $q((resolve, reject)=>{
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/posts/${postId}.json`)
+      .success(function(deleteResponse){
+        resolve(deleteResponse);
+      })
+      .error(function(deleteError){
+        reject(deleteError);
+      });
+    });
+  };
 
- //  var getSingleItem = function(itemId){
- //    return $q((resolve, reject)=>{
- //      $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${itemId}.json`)
- //      .success(function(getSingleResponse){
- //        resolve(getSingleResponse);
- //      })
- //      .error(function(getSingleError){
- //        reject(getSingleError);
- //      });
- //    });
- //  };
+  var getSinglePost = function(postId){
+    return $q((resolve, reject)=>{
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/posts/${postId}.json`)
+      .success(function(getSingleResponse){
+        resolve(getSingleResponse);
+      })
+      .error(function(getSingleError){
+        reject(getSingleError);
+      });
+    });
+  };
 
- // var editItem = function(editItem){
- //    return $q((resolve, reject)=>{
- //      $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${editItem.id}.json`,
- //          JSON.stringify({
- //          assignedTo: editItem.assignedTo,
- //          isCompleted: editItem.isCompleted,
- //          task: editItem.task,
- //          uid: editItem.uid
- //        })
- //      )
- //        .success(function(editResponse){
- //          resolve(editResponse);
- //        })
- //        .error(function(editError){
- //          reject(editError);
- //        });
- //    });
- //  };
+ var editPost = function(editPost){
+    return $q((resolve, reject)=>{
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/posts/${editPost.id}.json`,
+          JSON.stringify({
+          airportCity: editPost.airportCity,
+          airportCode: editPost.airportCode,
+          comment: editPost.comment,
+          waitTime: editPost.waitTime,
+          timeStamp: editPost.timeStamp,
+          username: editPost.username,
+          uid: editPost.uid
+        })
+      )
+        .success(function(editResponse){
+          resolve(editResponse);
+        })
+        .error(function(editError){
+          reject(editError);
+        });
+    });
+  };
 
-return {getPost:getPost, postNewPost:postNewPost, getPostByUid:getPostByUid};
+return {
+  getPost:getPost,
+  postNewPost:postNewPost,
+  getPostByUid:getPostByUid,
+  deletePost:deletePost,
+  getSinglePost:getSinglePost,
+  editPost:editPost
+};
 });

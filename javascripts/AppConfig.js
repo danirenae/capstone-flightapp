@@ -9,8 +9,6 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
   }
 });
 
-
-
 app.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
   firebase.initializeApp(FIREBASE_CONFIG);
 
@@ -33,7 +31,6 @@ if(currRoute.originalPath){
     if(!appTo && !logged){
       event.preventDefault();
       $location.path('/auth');
-
     }
   });
 });
@@ -75,10 +72,3 @@ app.config(function($routeProvider, $qProvider){ //routeProvider is angular meth
     })
     .otherwise('/auth');
 });
-
-
-
-
-
-
-

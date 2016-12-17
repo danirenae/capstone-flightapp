@@ -1,6 +1,5 @@
-
-
 "use strict";
+
 app.factory("SearchFactory", function($q, $http){
   var getAirportSearchCode = (searchText)=>{
     return $q((resolve,reject)=>{
@@ -27,7 +26,6 @@ app.factory("SearchFactory", function($q, $http){
       });
     });
   };
-
 
   return {
     getAirportSearchCode:getAirportSearchCode,

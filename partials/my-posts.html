@@ -1,26 +1,29 @@
-<div class="container">
-    <div class="row">
+<div class="row">
     <div ng-repeat="dog in posts">
-    <div>{{dog.username}}</div>
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
 
-    <div>{{dog.timeStamp}}</div>
-    <div>{{dog.waitTime}}</div>
-    <div>{{dog.comment}}</div>
-    <div>{{dog.airportCode}}</div>
-    <div>{{dog.airportCity}}</div>
+              <input class="card-title">My Post</input>
+              <p>You waited {{dog.waitTime}} minutes.</p>
+              <p>Date & Time: {{dog.timeStamp}}</p>
+              <p>Comment: {{dog.comment}}</p>
+            </div>
+            <div class="card-action">
+              <a ng-hide="!buttonHider" ng-click="inputChange(dog.id)">Edit</a>
+              <a ng-click="deletePost(dog.id)">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
 
 
 <!--
-    <h3>Todo</h3>
-<div ng-repeat="item in items | filter: {isCompleted:false} | filter: searchText">
-  <div class="panel panel-default">
-      <div class="panel-body">
-          <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-          <div class="col-xs-9"><a href="#/items/view/{{item.id}}">{{item.task}}</a></div>
-          <div class="col-xs-1">{{item.assignedTo}}</div>
-          <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(item.id)"></button></div>
-      </div>
-  </div>
-</div> -->
+
+<div ng-repeat="chordProgression in chordProgressions">
+        <div class="singleProgressionContainer" id="{{chordProgression.id}}">
+            <input type="text" ng-model="chordProgression.chord1" ng-disabled="editDisabler" ng-init="editDisabler=true">
+
+<button type="button" class="btn btn-sm doneButton" ng-hide="!buttonHider" ng-click="editProgression(chordProgression)">Done</button> -->

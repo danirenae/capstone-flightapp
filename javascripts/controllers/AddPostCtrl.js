@@ -5,7 +5,7 @@ app.controller("AddPostCtrl", function($scope, PostFactory, SearchFactory, $root
 
 $scope.airportCodeContainer = true;
 $scope.airportCityContainer = false;
-$scope.airportCode = {};
+$scope.airportCode = {}
 
 //setting the toggle
 $scope.setAirportCodeContainer = function(){
@@ -37,7 +37,7 @@ $scope.addPostSearchAirportCity = (searchAirportCity)=>{
   };
 
 //this will add a new post to the dom in home
-$scope.newPost = {};
+$scope.newPost = {}
 
 $scope.submitAddNewPost = (submit)=>{
   console.log("SUBMIT HAPPENED", submit);
@@ -45,12 +45,12 @@ $scope.submitAddNewPost = (submit)=>{
       $scope.newPost.airportCode = $scope.searchedAirportCode.code;
       $scope.newPost.airportCity = $scope.searchedAirportCode.city;
       $scope.newPost.username = $rootScope.user.username;
-      $scope.newPost.timeStamp = $scope.date;
+      $scope.newPost.timeStamp = new Date();
       //how can I implement this?
       // moment.format('MMMM Do YYYY, h:mm:ss a');
   PostFactory.postNewPost($scope.newPost).then(function(postId){
     $scope.newPost = {};
-    $location.url("/home");
+    $location.url("/home")
   });
 };
 });

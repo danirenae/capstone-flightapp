@@ -6,7 +6,8 @@
 
               <h3 class="card-title">My Post</h3>
               <p>You waited {{postypost.waitTime}} minutes at {{postypost.airportCode}} - {{postypost.airportCity}}.</p>
-              <p>Date & Time: {{postypost.timeStamp}}</p>
+
+              <p>Date & Time: <time>{{ postypost.timeStamp | amDateFormat: 'MMMM DD YYYY, h:mm a' }}</time></p>
               <p>Comment: {{postypost.comment}}</p>
             </div>
             <div class="card-action">

@@ -23,7 +23,7 @@
 
               <span class="card-title">{{cat.airportCode}} - {{cat.airportCity}} </span>
               <p>User {{cat.username}} waited {{cat.waitTime}} minutes.</p>
-               <p>Date & Time: {{cat.timeStamp}}</p>
+<p>Date & Time: <time>{{ cat.timeStamp | amDateFormat: 'MMMM DD YYYY, h:mm a' }}</time></p>
               <p>Comment: {{cat.comment}}</p>
             </div>
               </div>

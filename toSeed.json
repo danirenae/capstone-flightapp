@@ -1,28 +1,28 @@
 {
   "posts": {
     "post0": {
-      "airportCity" : "Nashville",
-      "airportCode" : "BNA",
+      "airportCity": "Nashville",
+      "airportCode": "BNA",
       "comment": "line is long",
-      "waitTime":  "60",
+      "waitTime": "60",
       "timeStamp": "12:35",
       "username": "D",
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     },
     "post1": {
-      "airportCity" : "Evansville",
-      "airportCode" : "EVV",
+      "airportCity": "Evansville",
+      "airportCode": "EVV",
       "comment": "line is SUPER short",
-      "waitTime":  "10",
+      "waitTime": "10",
       "timeStamp": "15:00",
       "username": "D",
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     },
     "post2": {
-      "airportCity" : "Barcelona",
-      "airportCode" : "BCN",
+      "airportCity": "Barcelona",
+      "airportCode": "BCN",
       "comment": "long",
-      "waitTime":  "90",
+      "waitTime": "90",
       "timeStamp": "7:52",
       "username": "moe",
       "uid": ""
@@ -41,26 +41,5 @@
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1",
       "username": "D"
     }
-  },
-  "profiles": {
-    "profile1" : {
-      "fullname" : "Dani Adkins",
-      "username" : "D",
-      "uid" : "HhrMZlIk0rhWpearUZoadcSIfvt1",
-      "homeairport" : "Nashville"
-    },
-    "profile2" : {
-      "fullname" : "A-A-Ron",
-      "username" : "A",
-      "uid" : "",
-      "homeairport" : "Los Angeles"
-    },
-    "profile3" : {
-      "fullname" : "B",
-      "username" : "B",
-      "uid" : "",
-      "homeairport" : "Portland"
-    }
   }
-
 }

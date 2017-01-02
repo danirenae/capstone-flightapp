@@ -53,7 +53,7 @@ $scope.submitUpdatedPost = (submitUpdated)=>{
       // $scope
       //how can I implement this?
       // moment.format('MMMM Do YYYY, h:mm:ss a');
-  PostFactory.editPost($scope.selectedPost).then(function(postId){
+  PostFactory.editPost(submitUpdated).then(function(postId){
     // $scope.updatedPost = {};
     $location.url("/my-posts");
   });

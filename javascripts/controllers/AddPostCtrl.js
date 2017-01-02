@@ -41,7 +41,6 @@ $scope.newPost = {};
 
 $scope.submitAddNewPost = (submit)=>{
   console.log("SUBMIT HAPPENED", submit);
-var date = timeSolver.getString(new Date(), "YYYY/MM/DD HH:MM:SS.SSS")
   $scope.newPost.uid = $rootScope.user.uid;
       $scope.newPost.airportCode = $scope.searchedAirportCode.code;
       $scope.newPost.airportCity = $scope.searchedAirportCode.city;

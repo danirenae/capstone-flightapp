@@ -21,11 +21,11 @@ $scope.searchAirportCode = (searchCode)=>{
     console.log("searchCode", searchCode);
     SearchFactory.getAirportSearchCode(searchCode).then((searchCodes)=>{
       console.log(searchCodes);
-      $scope.searchedCode = searchCodes;
+      $scope.searchedCode = searchCodes
       //all posts function to add all posts for that city
       PostFactory.getPost().then(function(fbItems){
          allPosts = fbItems;
-         console.log("THINGS ARE HAPPENING", fbItems);
+         console.log("THINGS ARE HAPPENING", fbItems)
          getAirportList($scope.searchedCode.code);
       });
 
@@ -37,7 +37,7 @@ $scope.searchAirportCity = (searchCity)=>{
     console.log("searchCity", searchCity);
     SearchFactory.getAirportSearchCity(searchCity).then((searchCities)=>{
       console.log(searchCities);
-      $scope.searchedCity = searchCities;
+      $scope.searchedCity = searchCities
     });
   };
 
@@ -47,9 +47,9 @@ $scope.searchAirportCity = (searchCity)=>{
       allPosts.forEach(function(mypost){
       console.log("mypost inside", mypost );
         if (mypost.airportCode === codeycode){
-          $scope.posts.push(mypost);
-        }
-      console.log("$scope.posts after", $scope.posts );
+          $scope.posts.push(mypost)
+        };
+      console.log("$scope.posts after", $scope.posts )
       });
 
     };

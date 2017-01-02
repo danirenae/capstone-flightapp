@@ -26,7 +26,7 @@ app.factory("AuthFactory", function($q, $http, $rootScope, FIREBASE_CONFIG) {
           resolve(authData);
         })
         .catch((error)=>{
-          console.log("error", error);
+          console.log("error", error)
           reject(error);
         });
     });

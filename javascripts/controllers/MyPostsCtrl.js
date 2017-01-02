@@ -30,7 +30,7 @@ $scope.deletePost = function(postId){ //passed this in on click here and in HTML
 
 $scope.selectedPost = function(thisSelected){
   $scope.selected = thisSelected;
-}
+};
 
 // edit function from todo - also look at Edit controller and edit in factory
 // $scope.inputChange = function(thingy){
@@ -55,7 +55,7 @@ $scope.submitUpdatedPost = (submitUpdated)=>{
       // moment.format('MMMM Do YYYY, h:mm:ss a');
   PostFactory.editPost($scope.selectedPost).then(function(postId){
     // $scope.updatedPost = {};
-    $location.url("/my-posts")
+    $location.url("/my-posts");
   });
 };
 });

@@ -26,11 +26,11 @@ app.factory("UserFactory", function($q, $http, FIREBASE_CONFIG){
         Object.keys(userObject).forEach(function(key){
           users.push(userObject[key]);
         });
-        console.log("users", users);
+        console.log("users", users)
           resolve(users[0]);
       })
       .error(function(error){
-        console.log("error", error);
+        console.log("error", error)
         reject(error);
       });
     });

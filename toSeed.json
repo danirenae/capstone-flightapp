@@ -31,15 +31,28 @@
   "users": {
     "user0": {
       "uid": "",
-      "username": "a"
+      "username": "a",
+      "firstName" : "",
+      "lastName" : "",
+      "homeAirport" : "",
+      "favoriteAirport" : "",
     },
     "user1": {
       "uid": "",
-      "username": "b"
+      "username": "b",
+      "firstName" : "",
+      "lastName" : "",
+      "homeAirport" : "",
+      "favoriteAirport" : ""
+
     },
     "user2": {
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1",
-      "username": "D"
+      "username": "D",
+      "firstName" : "",
+      "lastName" : "",
+      "homeAirport" : "",
+      "favoriteAirport" : ""
     }
   }
 }

@@ -8,6 +8,29 @@
   bottom: 0;
 }
 
+.dark-grey-text {
+  color: #263238;
+}
+
+.dark-grey {
+  background-color: #263238;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+//  /* label focus color */
+//    .input-field input[type=text]:focus {
+//      color: #90a4ae;
+// }
+// /* label underline focus color */
+//    .input-field input[type=text]:focus {
+//      border-bottom: 1px solid #90a4ae;
+//      box-shadow: 0 1px 0 0 #90a4ae;
+//    }
+
+
 html, body {
   background: #6dafc6;
 }
@@ -96,6 +119,10 @@ html, body {
   height: 80px;
   background: -webkit-linear-gradient(left, #D5D4E7 0%, #68687D 100%);
   background: linear-gradient(left, #D5D4E7 0%, #68687D 100%);
+  background: webkit-gradient(left, #D5D4E7 0%, #68687D 100%);
+  background:  -o-linear-gradient(left, #D5D4E7 0%, #68687D 100%);
+  background:  -moz-linear-gradient(left, #D5D4E7 0%, #68687D 100%);
+  background:  -ms-linear-gradient(left, #D5D4E7 0%, #68687D 100%);
   position: absolute;
   left: 42.6%;
   top: 60.5%;
@@ -153,8 +180,8 @@ html, body {
   border-bottom-right-radius: 3px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
 }
 
 .window3 {
@@ -198,8 +225,8 @@ html, body {
   bottom: 38%;
   -webkit-transform: rotateZ(-81deg);
           transform: rotateZ(-81deg);
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
   border-top-right-radius: 15px;
   z-index: -100;
 }
@@ -304,8 +331,12 @@ html, body {
   position: absolute;
   width: 81%;
   height: 80%;
+  background: -webkit-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
   background: -webkit-radial-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
   background: radial-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
+  background: -o-radial-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
+  background:  -moz-radial-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
+  background:  -ms-radial-gradient(center, cover, #000005 0%, #2B2A43 28%, #000005 85%);
   border-radius: inherit;
   top: 50%;
   left: 51%;
@@ -331,6 +362,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-color: grey;
   background-color: rgba(255,255,255,0.4);
   border-radius: 50%;
   left: -33%;

@@ -2,15 +2,15 @@
   <div class="row">
     <div class="input-field col s10">
       <input ng-model="searched" placeholder="" id="" type="text" class="validate">
-      <label for="first_name">Enter Airport Code</label>
+      <label class="dark-grey-text">Enter Airport Code</label>
     </div>
     <div class="waves-default form-group">
-      <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="searchAirportCode(searched)">Enter</a>
+      <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10 dark-grey white-text" ng-click="searchAirportCode(searched)">Enter</a>
     </div>
   </div>
   <div class="row">
-    <div class="post-output col s10">{{searchedCode.code}}</div>
-    <div class="post-output col s10">{{searchedCode.city}}</div>
+    <div class="post-output col s10 dark-grey-text">{{searchedCode.code}}</div>
+    <div class="post-output col s10 dark-grey-text">{{searchedCode.city}}</div>
   </div>
 </div>
 <div class="row">

@@ -1,6 +1,5 @@
 "use strict";
 
-//function that tell us whether or not a person is logged in
 let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
   if(AuthFactory.isAuthenticated()){
     resolve();
@@ -17,16 +16,11 @@ app.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     let logged = AuthFactory.isAuthenticated();
     let appTo;
 
-console.log(currRoute);
-
 if(currRoute.originalPath){
-    appTo = 5 !== -1; //true
-    appTo = -1 !== -1; //false
+    appTo = 5 !== -1;
+    appTo = -1 !== -1;
     appTo = currRoute.originalPath.indexOf('/auth') !== -1;
 }
-
-    console.log("appTo", appTo);
-    console.log("hey");
 
     if(!appTo && !logged){
       event.preventDefault();
@@ -35,7 +29,7 @@ if(currRoute.originalPath){
   });
 });
 
-app.config(function($routeProvider, $qProvider){ //routeProvider is angular method that does routes
+app.config(function($routeProvider, $qProvider){
   $routeProvider
     .when('/', {
       templateUrl: 'partials/auth.html',

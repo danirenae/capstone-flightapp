@@ -11,10 +11,6 @@ app.controller("NavCtrl", function($scope){
       url: "#/home"
     },
     {
-      name: "Profile",
-      url: "#/profile"
-    },
-    {
       name: "Add Post",
       url: "#/add-post"
     },

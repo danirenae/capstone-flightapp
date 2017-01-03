@@ -1,107 +1,76 @@
 <div class="row">
-    <div ng-repeat="postypost in posts">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-
-              <h3 class="card-title">My Post</h3>
-              <p>You waited {{postypost.waitTime}} minutes at {{postypost.airportCode}} - {{postypost.airportCity}}.</p>
-
-              <p>Date & Time: <time>{{ postypost.timeStamp | amDateFormat: 'MMMM DD YYYY, h:mm a' }}</time></p>
-              <p>Comment: {{postypost.comment}}</p>
-            </div>
-            <div class="card-action">
-              <a ng-click="selectedPost(postypost)" data-target="editModal">Edit</a>
-              <a ng-click="deletePost(postypost.id)">Delete</a>
+  <div ng-repeat="postypost in posts">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <h3 class="card-title">My Post</h3>
+          <p>You waited {{postypost.waitTime}} minutes at {{postypost.airportCode}} - {{postypost.airportCity}}.</p>
+          <p>Date & Time: <time>{{ postypost.timeStamp | amDateFormat: 'MMMM DD YYYY, h:mm a' }}</time></p>
+          <p>Comment: {{postypost.comment}}</p>
+        </div>
+        <div class="card-action">
+          <a ng-click="selectedPost(postypost)" data-target="editModal">Edit</a>
+          <a ng-click="deletePost(postypost.id)">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="editModal" class="modal">
+<div ng-repeat="postypost in posts">
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>Edit Post for {{selected.airportCode}} - {{selected.airportCity}}</h4>
+    <form class="form">
+      <div class="row">
+        <div class="modal-body">
+          <div class="row">
+            <div class="row">
+              <div class="input-field col s12">
+                <input disabled value="" id="disabled" type="text" class="validate">
+                <label for="disabled">Date & Time: {{selected.timeStamp}}</label>
               </div>
             </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="selected.comment" id="email" type="text" class="validate">
+                <label for="email">New Comment</label>
+              </div>
+            </div>
+            <div class="col s12">
+              <select class="" ng-model="selected.waitTime" material-select>
+                <option value="">Choose Your Wait Time</option>
+                <option value="10">10 minutes</option>
+                <option value="20">20 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="40">40 minutes</option>
+                <option value="50">50 minutes</option>
+                <option value="60 (1 hour)">60 minutes (1 hour)</option>
+                <option value="70">70 minutes</option>
+                <option value="80">80 minutes</option>
+                <option value="90 (1.5 hours)">90 minutes (1.5 hours)</option>
+                <option value="100">100 minutes</option>
+                <option value="110">110 minutes</option>
+                <option value="120 (2 hours)">120 minutes (2 hours)</option>
+                <option value="130">130 minutes</option>
+                <option value="140">140 minutes</option>
+                <option value="150 (2.5 hours)">150 minutes (2.5 hours)</option>
+                <option value="160">160 minutes</option>
+                <option value="170">170 minutes</option>
+                <option value="180 (3 hours)">180 minutes(3 hours)</option>
+                <option value="190 (3+ hours)">190+ minutes (3+ hours)</option>
+              </select>
+              <label>Wait Time</label>
+            </div>
+            <button class="waves-effect waves-light btn-large modal-close col s" ng-click="submitUpdatedPost(selected)">Submit Changes</button>
           </div>
-        </div>
-      </div>
-
-        <!-- Modal Trigger -->
-
-
-
-
-
-  <!-- Modal Structure -->
-  <div id="editModal" class="modal">
-  <div ng-repeat="postypost in posts">
-
-    <div class="modal-content">
-    <div class="modal-header">
-      <h4>Edit Post for {{selected.airportCode}} - {{selected.airportCity}}</h4>
- <form class="form">
-     <div class="row">
-      <div class="modal-body">
-      <div class="row">
-       <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="" id="disabled" type="text" class="validate">
-          <label for="disabled">Date & Time: {{selected.timeStamp}}</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input ng-model="selected.comment" id="email" type="text" class="validate">
-          <label for="email">New Comment</label>
-        </div>
-      </div>
-
-  <div class="col s12">
-    <select class="" ng-model="selected.waitTime" material-select>
-      <option value="">Choose Your Wait Time</option>
-      <option value="10">10 minutes</option>
-      <option value="20">20 minutes</option>
-      <option value="30">30 minutes</option>
-      <option value="40">40 minutes</option>
-      <option value="50">50 minutes</option>
-      <option value="60 (1 hour)">60 minutes (1 hour)</option>
-      <option value="70">70 minutes</option>
-      <option value="80">80 minutes</option>
-      <option value="90 (1.5 hours)">90 minutes (1.5 hours)</option>
-      <option value="100">100 minutes</option>
-      <option value="110">110 minutes</option>
-      <option value="120 (2 hours)">120 minutes (2 hours)</option>
-      <option value="130">130 minutes</option>
-      <option value="140">140 minutes</option>
-      <option value="150 (2.5 hours)">150 minutes (2.5 hours)</option>
-      <option value="160">160 minutes</option>
-      <option value="170">170 minutes</option>
-      <option value="180 (3 hours)">180 minutes(3 hours)</option>
-      <option value="190 (3+ hours)">190+ minutes (3+ hours)</option>
-    </select>
-    <label>Wait Time</label>
-
+    </form>
+    </div>
+    </div>
   </div>
-
- <button class="waves-effect waves-light btn-large modal-close col s" ng-click="submitUpdatedPost(selected)">Submit Changes</button>
 </div>
 
 
-      </form>
-      </div>
-      </div>
-      </div>
-      </div>
 
 
 
-
-
-
-
-
-
-
-
-
-<!--
-
-<div ng-repeat="chordProgression in chordProgressions">
-        <div class="singleProgressionContainer" id="{{chordProgression.id}}">
-            <input type="text" ng-model="chordProgression.chord1" ng-disabled="editDisabler" ng-init="editDisabler=true">
-
-<button type="button" class="btn btn-sm doneButton" ng-hide="!buttonHider" ng-click="editProgression(chordProgression)">Done</button> -->

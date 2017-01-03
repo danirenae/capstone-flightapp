@@ -9,7 +9,6 @@ app.controller("AuthCtrl", function($scope, $rootScope, AuthFactory, UserFactory
     password: "123456"
   };
 
-
   if($location.path() === "/logout"){
     AuthFactory.logout();
     $rootScope.user = {};
@@ -18,10 +17,8 @@ app.controller("AuthCtrl", function($scope, $rootScope, AuthFactory, UserFactory
 
 let logMeIn = function(loginStuff){
   AuthFactory.authenticate(loginStuff).then(function(didLogin){
-    console.log(didLogin);
     return UserFactory.getUser(didLogin.uid);
   }).then(function(userCreds){
-    console.log("userCreds", userCreds);
       $rootScope.user = userCreds;
       $scope.login = {};
       $scope.register = {};
@@ -42,7 +39,6 @@ $scope.setRegisterContainer = function (){
 $scope.registerUser = function (registerNewUser){
   AuthFactory.registerWithEmail(registerNewUser).then(function(didRegister){
     registerNewUser.uid = didRegister.uid;
-    console.log('thing',didRegister);
     return UserFactory.addUser(registerNewUser);
   }).then(function(registerComplete){
     logMeIn(registerNewUser);

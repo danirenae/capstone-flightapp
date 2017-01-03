@@ -26,7 +26,7 @@ app.factory("PostFactory", function($q, $http, FIREBASE_CONFIG){
           airportCode: postypost.airportCode,
           comment: postypost.comment,
           waitTime: postypost.waitTime,
-          timeStamp: postypost.timeStamp,
+          timeStamp: postypost.timeStamp.getTime(),
           username: postypost.username,
           uid: postypost.uid
         })

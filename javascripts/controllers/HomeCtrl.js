@@ -32,4 +32,20 @@ $scope.searchAirportCity = (searchCity)=>{
         }
       });
     };
+
+//   let checkTime = function (){
+//   let curDate = new Date();
+//   let y = curDate.getFullYear();
+//   let m = curDate.getMonth() + 1;
+//       if (m < 10) {
+//         m = '0' + m;
+//   }
+//   var d = curDate.getDate();
+//       if (d < 10) {
+//         d = '0' + d;
+//   }
+//   $scope.curDate = y + '-' + m + '-' + d;
+// };
+// checkTime();
+
 });

@@ -11,20 +11,9 @@ $scope.setAirportCodeContainer = function(){
   $scope.airportCityContainer = false;
 };
 
-$scope.setAirportCityContainer = function(fire){
-  $scope.airportCodeContainer = false;
-  $scope.airportCityContainer = true;
-};
-
 $scope.addPostSearchAirportCode = (searchAirportCode)=>{
     SearchFactory.getAirportSearchCode(searchAirportCode).then((searchAirportCodes)=>{
       $scope.searchedAirportCode = searchAirportCodes;
-    });
-  };
-
-$scope.addPostSearchAirportCity = (searchAirportCity)=>{
-    SearchFactory.getAirportSearch(searchAirportCity).then((searchAirportCities)=>{
-      $scope.searchedAirportCity = searchAirportCities;
     });
   };
 

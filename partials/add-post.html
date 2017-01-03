@@ -8,10 +8,10 @@
         </div>
       </div>
       <h5>Add New Post</h5>
-      <div class="row">
+<!--       <div class="row">
         <button class="waves-effect waves-light btn-large col s5" ng-click="setAirportCodeContainer()">Airport Code</button>
         <button class="waves-effect waves-light btn-large col s5" ng-click="setAirportCityContainer()">Airport City</button>
-      </div>
+      </div> -->
       <div ng-if="airportCodeContainer" class="row">
     <form >
     <div class="form-group input-field col s12">
@@ -26,7 +26,7 @@
     <div class="post-output col s10">{{searchedAirportCode.code}}</div>
     </div>
     </div>
-    <div ng-if="airportCityContainer" class="row">
+   <!--  <div ng-if="airportCityContainer" class="row">
       <form>
         <div class="form-group input-field col s12">
           <input id="airport-city" type="text" class="validate" ng-model="searchedCity">
@@ -43,7 +43,7 @@
           <div class="post-output col s10">{{searchedAirportCity.city}}</div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="input-field col s12">
         <textarea id="comment" class="materialize-textarea" length="140" ng-model="newPost.comment"></textarea>

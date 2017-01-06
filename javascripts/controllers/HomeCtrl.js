@@ -33,12 +33,12 @@ $scope.searchAirportCity = (searchCity)=>{
       });
     };
 
-  $scope.greaterThan = function(prop){
-    let val = new Date();
-    val.setHours(0,0,0,0);
-    return function(item){
-      return item[prop] > val;
-    };
-  };
+  // $scope.greaterThan = function(prop){
+  //   let val = new Date();
+  //   val.setHours(0,0,0,0);
+  //   return function(item){
+  //     return item[prop] > val;
+  //   };
+  // };
 
 });

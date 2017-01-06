@@ -16,10 +16,16 @@
     </div>
   </div>
 </div>
+
+
+
 <div id="editModal" class="modal">
-<div ng-repeat="postypost in posts">
 <div class="modal-content">
   <div class="modal-header">
+  <form class="form">
+
+  <div ng-repeat="postypost in posts">
+
     <h4>Edit Post for {{selected.airportCode}} - {{selected.airportCity}}</h4>
     <form class="form">
       <div class="row">
@@ -64,11 +70,16 @@
             </div>
             <button class="waves-effect waves-light btn-large modal-close col s" ng-click="submitUpdatedPost(selected)">Submit Changes</button>
           </div>
-    </form>
+    <!-- </form> -->
+    <!-- </div> -->
+            </form>
+
     </div>
     </div>
-  </div>
-</div>
+    </div>
+
+ <!--  </div>
+</div> -->
 
 
 

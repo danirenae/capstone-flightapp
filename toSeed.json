@@ -3,56 +3,91 @@
     "post0": {
       "airportCity": "Nashville",
       "airportCode": "BNA",
-      "comment": "line is long",
-      "waitTime": "60",
-      "timeStamp": "12:35",
-      "username": "D",
-      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
+      "comment": "line is long; get here early",
+      "waitTime": "50",
+      "timeStamp": "January 06 2017, 1:45 am",
+      "username": "WildBillHickok (William Hickok)",
+      "uid": ""
     },
     "post1": {
-      "airportCity": "Evansville",
-      "airportCode": "EVV",
+      "airportCity": "Nashville",
+      "airportCode": "BNA",
       "comment": "line is SUPER short",
       "waitTime": "10",
-      "timeStamp": "15:00",
-      "username": "D",
+      "timeStamp": "January 06 2017, 11:18 am",
+      "username": "daniYo",
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     },
     "post2": {
-      "airportCity": "Barcelona",
-      "airportCode": "BCN",
-      "comment": "long",
-      "waitTime": "90",
-      "timeStamp": "7:52",
-      "username": "moe",
+      "airportCity": "Nashville",
+      "airportCode": "BNA",
+      "comment": "This is Nashville SRSLY line is so short",
+      "waitTime": "10",
+      "timeStamp": "January 06 2017, 10:15 am",
+      "username": "NathanisG (Nathan Gonzalez)",
       "uid": ""
+    },
+    "post3": {
+      "airportCity": "Nashville",
+      "airportCode": "BNA",
+      "comment": "short line, y'all",
+      "waitTime": "5",
+      "timeStamp": "January 06 2017, 10:00 am",
+      "username": "ZoeAIMS! (Zoe Ames)",
+      "uid": ""
+    },
+    "post4": {
+      "airportCity": "Evansville",
+      "airportCode": "EVV",
+      "comment": "The line does not exist",
+      "waitTime": "0",
+      "timeStamp": "December 22 2016, 6:00 am",
+      "username": "daniYo",
+      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
+    },
+    "post5": {
+      "airportCity": "San Francisco",
+      "airportCode": "SFO",
+      "comment": "The line is extremely long so get here early.",
+      "waitTime": "90",
+      "timeStamp": "January 01 2017, 1:00 pm",
+      "username": "daniYo",
+      "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1"
     }
   },
   "users": {
     "user0": {
       "uid": "",
-      "username": "a",
-      "firstName" : "",
-      "lastName" : "",
-      "homeAirport" : "",
-      "favoriteAirport" : "",
+      "username": "WildBillHickok",
+      "firstName": "William",
+      "lastName": "Hickok",
+      "homeAirport": "Nashville",
+      "favoriteAirport": "None of them"
     },
     "user1": {
       "uid": "",
-      "username": "b",
-      "firstName" : "",
-      "lastName" : "",
-      "homeAirport" : "",
-      "favoriteAirport" : ""
-
+      "username": "NathanIsG",
+      "firstName": "Nathan",
+      "lastName": "Gonzalez",
+      "homeAirport": "Nashville",
+      "favoriteAirport": "Atlanta"
     },
     "user2": {
+      "uid": "",
+      "username": "ZoeAIMS!",
+      "firstName": "Zoe",
+      "lastName": "Ames",
+      "homeAirport": "Nashville",
+      "favoriteAirport": "Barbados"
+
+    },
+    "user3": {
       "uid": "HhrMZlIk0rhWpearUZoadcSIfvt1",
-      "username": "D",
-      "firstName" : "",
-      "lastName" : "",
-      "homeAirport" : "",
-      "favoriteAirport" : ""
+      "username": "daniYo",
+      "firstName": "Dani",
+      "lastName": "Adkins",
+      "homeAirport": "Nashville",
+      "favoriteAirport": "#PDXcarpet"
     }
   }
 }

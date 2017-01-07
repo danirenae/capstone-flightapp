@@ -1,0 +1,71 @@
+<div class="row profilestyle">
+<h3 class="profileh3">My Profile</h3>
+
+<div ng-model="user">
+<div class="col s8 m6">
+<div class="card blue-grey darken-1">
+<div class="card-content profileinfo">
+<h2 class="card-title"></h2>
+<p>Name: {{user.firstName}} {{user.lastName}}</p>
+<p>Home Airport: {{user.homeAirport}}</p>
+<p>Favorite Airport: {{user.favoriteAirport}}</p>
+<p>Username: {{user.username}}</p>
+</div>
+  <div class="buttonprofile card-action">
+    <div class="col s10">
+      <a ng-click="currentUser(user)"class="waves-effect waves-light btn" data-target="updateProfileModal">Edit User Profile</a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="updateProfileModal" class="modal">
+<div ng-repeat="userific in user">
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>Edit Profile</h4>
+    <form class="form">
+      <div class="row">
+        <div class="modal-body">
+          <div class="row">
+
+              <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="currentProf.firstName" id="firstName" type="text" class="validate">
+                <label for="email">First Name</label>
+              </div>
+            </div>
+
+          <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="currentProf.lastName" id="lastName" type="text" class="validate">
+                <label for="email">Last Name</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="currentProf.username" id="username" type="text" class="validate">
+                <label for="email">Username</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="currentProf.homeAirport" id="homeairport" type="text" class="validate">
+                <label for="email">Home Airport</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="currentProf.favoriteAirport" id="faveairport" type="text" class="validate">
+                <label for="email">Favorite Airport</label>
+              </div>
+            </div>
+
+             <button class="waves-effect waves-light btn-large modal-close col s" ng-click="submitUpdatedPost(selected)">Submit Changes</button>
+

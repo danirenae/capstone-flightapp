@@ -29,6 +29,7 @@ $scope.selectedPost = function(thisSelected){
   $scope.selected = thisSelected;
 };
 
+//I need to write this so it selects only the one post
 $scope.submitUpdatedPost = (submitUpdated)=>{
   PostFactory.editPost(submitUpdated).then(function(postId){
     $location.url("/my-posts");

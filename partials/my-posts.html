@@ -1,6 +1,8 @@
-<div class="row">
+<div class="row mypostsstyle">
+<h3 class="mypostsh3">My Posts</h3>
+
   <div ng-repeat="postypost in posts">
-    <div class="col s12 m6">
+    <div class="col s10 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <h3 class="card-title">My Post</h3>
@@ -15,11 +17,16 @@
       </div>
     </div>
   </div>
-</div>
+
+
+
 <div id="editModal" class="modal">
-<div ng-repeat="postypost in posts">
 <div class="modal-content">
   <div class="modal-header">
+  <form class="form">
+
+  <div ng-repeat="postypost in posts">
+
     <h4>Edit Post for {{selected.airportCode}} - {{selected.airportCity}}</h4>
     <form class="form">
       <div class="row">
@@ -64,11 +71,20 @@
             </div>
             <button class="waves-effect waves-light btn-large modal-close col s" ng-click="submitUpdatedPost(selected)">Submit Changes</button>
           </div>
-    </form>
-    </div>
-    </div>
-  </div>
+    <!-- </form> -->
+    <!-- </div> -->
 </div>
+</div>
+
+    </div>
+      </form>
+    </div>
+    </div>
+
+    </div>
+
+ <!--  </div>
+</div> -->
 
 
 

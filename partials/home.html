@@ -1,19 +1,21 @@
-<div class="container">
-  <div class="row">
+  <div class="row homestyle">
+  <h3 class="homeh3">Search By Airport Code</h3>
+      <h6 class="smalltexthome">Enter the airport code below to find out how long other users have waited in the security check line.</h6>
     <div class="input-field col s10">
       <input ng-model="searched" placeholder="" id="" type="text" class="validate">
-      <label for="first_name">Enter Airport Code</label>
+      <label class="dark-grey-text">Enter Airport Code</label>
     </div>
-    <div class="form-group">
-      <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10" ng-click="searchAirportCode(searched)">Enter</a>
+    <div class="waves-default form-group">
+      <a href class=" btn btn-lg btn-success dark-grey white-text" ng-click="searchAirportCode(searched)">Enter</a>
     </div>
-  </div>
-  <div class="row">
-    <div class="post-output col s10">{{searchedCode.code}}</div>
-    <div class="post-output col s10">{{searchedCode.city}}</div>
-  </div>
-</div>
-<div class="row">
+<!--
+  <div class="results">
+  <p><h5>Results {{searchedCode.code}} {{searchedCode.city}}</h5></p>
+  </div> -->
+
+
+
+
 <div ng-repeat="cat in posts | filter: greaterThan('timeStamp')">
     <div class="col s12 m6">
       <div class="card blue-grey darken-1">

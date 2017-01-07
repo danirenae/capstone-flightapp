@@ -1,10 +1,14 @@
-<div class="container col-xs-6 col-xs-offset-3">
-  <div class="row">
-    <button class="btn btn-info col-xs-6 dark-grey white-text" ng-click="setLoginContainer()">Login</button>
+  <div class="row authdiv" layout-align="center">
+  <h1 class="authh1">FlightPal</h1>
+  <div class="col s10 m10">
+
+<div>
+    <button class="btn btn-info dark-grey white-text" ng-click="setLoginContainer()">Login</button>
     <button class="btn btn-success col-xs-6 dark-grey white-text" ng-click="setRegisterContainer()">Register</button>
-  </div>
+ </div>
+
   <div class="row">
-    <form ng-show="loginContainer">
+    <form ng-show="loginContainer" class="login-container">
       <div class="form-group">
         <label class="dark-grey-text">Email Address</label>
         <input type="email" id="inputEmail" class="col-xs-offset-1 col-xs-10 dark-grey-text input-field" placeholder="Email Address" ng-model="login.email" required autofocus>
@@ -18,7 +22,8 @@
       </div>
     </form>
   </div>
-  <form ng-show="registerContainer">
+
+  <form ng-show="registerContainer" class="register-container">
     <div class="form-group">
       <label class="dark-grey-text">Email Address</label>
       <input type="email" id="inputEmail" class="col-xs-offset-1 col-xs-10 dark-grey-text" placeholder="Email Address" ng-model="register.email" required>
@@ -35,4 +40,5 @@
       <a href class=" btn btn-lg btn-success col xs-offset-1 col-xs-10 dark-grey white-text" ng-click="registerUser(register)">Submit Registration</a>
     </div>
   </form>
+  </div>
 </div>

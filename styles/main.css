@@ -82,12 +82,8 @@ div.login-container {
   padding-top: 4px; }
 
 .buttonprofile {
-  padding-left: 40px; }
-
-.profilestyle {
-  margin-bottom: 100px;
-  margin-left: 300px;
-  margin-right: 60px; }
+  padding-left: 40px;
+  padding-bottom: 0; }
 
 .profileinfo {
   text-align: center; }
